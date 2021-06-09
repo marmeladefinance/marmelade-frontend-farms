@@ -91,6 +91,10 @@ const fetchFarms = async () => {
         }
       }
 
+      const response = await fetch(`https://api.pancakeswap.info/api/v2/tokens/${farmConfig.quoteTokenAdresses[CHAIN_ID]}`)
+      const priceData = await response.json()
+      const quoteTokenPrice = new BigNumber(priceData.data.price)
+      
       const [info, totalAllocPoint, marmelPerBlock] = await multicall(masterchefABI, [
         {
           address: getMasterChefAddress(),
@@ -116,6 +120,7 @@ const fetchFarms = async () => {
         // quoteTokenAmount: quoteTokenAmount,
         lpTotalInQuoteToken: lpTotalInQuoteToken.toJSON(),
         tokenPriceVsQuote: tokenPriceVsQuote.toJSON(),
+        quoteTokenPrice: quoteTokenPrice.toJSON(),
         poolWeight: poolWeight.toNumber(),
         multiplier: `${allocPoint.div(100).toString()}X`,
         depositFeeBP: info.depositFeeBP,

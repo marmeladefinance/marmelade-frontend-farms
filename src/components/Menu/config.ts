@@ -26,7 +26,7 @@ const config: MenuEntry[] = [
     href: '/farms',
   },
   {
-    label: 'Nests',
+    label: 'Pools',
     icon: 'PoolIcon',
     href: '/nests',
   },
@@ -45,44 +45,44 @@ const config: MenuEntry[] = [
   //   icon: 'NftIcon',
   //   href: '/nft',
   // },
-  {
-    label: 'Info',
-    icon: 'InfoIcon',
-    items: [
-      {
-        label: 'PancakeSwap',
-        href: 'https://pancakeswap.info/token/0x1fb2151f7cb40805905f9b731c373c5cc682aa57',
-      },
-      {
-        label: 'CoinGecko',
-        href: 'https://www.coingecko.com/en/coins/goose-finance',
-      },
-      {
-        label: 'CoinMarketCap',
-        href: 'https://coinmarketcap.com/currencies/goose-finance/',
-      },
-      {
-        label: 'AstroTools',
-        href: 'https://app.astrotools.io/pancake-pair-explorer/0x19e7cbecdd23a16dfa5573df54d98f7caae03019',
-      },
-    ],
-  },
+  // {
+  //   label: 'Info',
+  //   icon: 'InfoIcon',
+  //   items: [
+  //     {
+  //       label: 'PancakeSwap',
+  //       href: 'https://pancakeswap.info/token/0x1fb2151f7cb40805905f9b731c373c5cc682aa57',
+  //     },
+  //     {
+  //       label: 'CoinGecko',
+  //       href: 'https://www.coingecko.com/en/coins/goose-finance',
+  //     },
+  //     {
+  //       label: 'CoinMarketCap',
+  //       href: 'https://coinmarketcap.com/currencies/goose-finance/',
+  //     },
+  //     {
+  //       label: 'AstroTools',
+  //       href: 'https://app.astrotools.io/pancake-pair-explorer/0x19e7cbecdd23a16dfa5573df54d98f7caae03019',
+  //     },
+  //   ],
+  // },
   {
     label: 'More',
     icon: 'MoreIcon',
     items: [
       {
         label: 'Github',
-        href: 'https://github.com/marmeladeswap/',
+        href: 'https://github.com/marmeladefinance',
       },
       {
         label: 'Docs',
-        href: 'https://marmeladeswap.gitbook.io/goose-finance/',
+        href: 'https://marmelade-finance.gitbook.io/marmelade-finance/',
       },
-      {
-        label: 'Blog',
-        href: 'https://goosefinance.medium.com/',
-      },
+      // {
+      //   label: 'Blog',
+      //   href: 'https://goosefinance.medium.com/',
+      // },
     ],
   }
 ]

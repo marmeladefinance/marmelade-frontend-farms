@@ -15,6 +15,7 @@ import ApyButton from './ApyButton'
 
 export interface FarmWithStakedValue extends Farm {
   apy?: BigNumber
+  account?: string
 }
 
 const RainbowLight = keyframes`
@@ -109,8 +110,10 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
     if (farm.quoteTokenSymbol === QuoteToken.CAKE) {
       return cakePrice.times(farm.lpTotalInQuoteToken)
     }
-    return farm.lpTotalInQuoteToken
-  }, [bnbPrice, cakePrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol])
+    return new BigNumber(farm.quoteTokenPrice).times(farm.lpTotalInQuoteToken)
+  }, [bnbPrice, cakePrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol, farm.quoteTokenPrice])
+
+  console.log("bnb price ", bnbPrice?.toString())
 
   const totalValueFormated = totalValue
     ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`

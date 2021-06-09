@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, Text, BaseLayout } from '@pancakeswap-libs/uikit'
+import { Heading, Text, BaseLayout, LinkExternal } from '@pancakeswap-libs/uikit'
 import useI18n from 'hooks/useI18n'
 import Page from 'components/layout/Page'
 import FarmStakingCard from './components/FarmStakingCard'
@@ -62,7 +62,13 @@ const Home: React.FC = () => {
         <Heading as="h1" size="xl" mb="24px" color="secondary">
           {TranslateString(576, 'Marmelade Swap')}
         </Heading>
-        <Text>{TranslateString(578, 'Top 3 best DEFI app on Binance Smart Chain.')}</Text>
+        <Text>{TranslateString(999, 'New DeFi app on Binance Smart Chain.')}</Text>
+        <LinkExternal href="https://app.bounce.finance/fixed-swap/8854" style={{ marginTop: '10px' }} fontSize="25px" color="#d00026">
+          {TranslateString(9999, 'Presale Link Here')}
+        </LinkExternal>
+        <LinkExternal href="https://bscscan.com/block/countdown/8300000" style={{ marginTop: '10px' }} fontSize="25px">
+          {TranslateString(9999, 'Farming Starts on Block 8300000')}
+        </LinkExternal>
       </Hero>
       <div>
         <Cards>

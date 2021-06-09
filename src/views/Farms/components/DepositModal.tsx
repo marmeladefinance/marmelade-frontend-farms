@@ -12,9 +12,17 @@ interface DepositModalProps {
   onDismiss?: () => void
   tokenName?: string
   depositFeeBP?: number
+  isTokenOnly?: boolean
 }
 
-const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, tokenName = '' , depositFeeBP = 0}) => {
+const DepositModal: React.FC<DepositModalProps> = ({
+  max,
+  onConfirm,
+  onDismiss,
+  tokenName = '',
+  depositFeeBP = 0,
+  isTokenOnly,
+}) => {
   const [val, setVal] = useState('')
   const [pendingTx, setPendingTx] = useState(false)
   const TranslateString = useI18n()
@@ -42,6 +50,7 @@ const DepositModal: React.FC<DepositModalProps> = ({ max, onConfirm, onDismiss, 
         max={fullBalance}
         symbol={tokenName}
         depositFeeBP={depositFeeBP}
+        isTokenOnly={isTokenOnly}
       />
       <ModalActions>
         <Button variant="secondary" onClick={onDismiss}>

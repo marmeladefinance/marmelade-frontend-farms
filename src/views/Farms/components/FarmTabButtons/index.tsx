@@ -32,15 +32,15 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 32px;
 `
 
 const ToggleWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 32px;
-
+  margin-right: 12px;
+  margin-left: 12px;
+  
   ${Text} {
     margin-left: 8px;
   }

@@ -82,7 +82,7 @@ const Farm: React.FC = () => {
       </Hero>
       <PoolTabButtons />
       <Divider />
-      <FlexLayout>
+      <FlexLayout isTableMode={false}>
         <Route exact path={`${path}`}>
           <>
             {orderBy(openPools, ['sortOrder']).map((pool) => (

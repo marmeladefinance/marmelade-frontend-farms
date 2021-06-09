@@ -25,7 +25,7 @@ const Menu = (props) => {
       setLang={setSelectedLanguage}
       cakePriceUsd={cakePriceUsd.toNumber()}
       links={config}
-      priceLink="https://www.coingecko.com/en/coins/goose-finance"
+      priceLink="https://bscscan.com/token/0xbfba8b5e5cc852f2de2e1ecc67038ba765874bd8"
       {...props}
     />
   )
