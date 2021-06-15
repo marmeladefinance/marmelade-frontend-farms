@@ -68,6 +68,11 @@ const config: MenuEntry[] = [
   //   ],
   // },
   {
+    label: 'Audit',
+    icon: 'AuditIcon',
+    href: "https://github.com/TechRate/Smart-Contract-Audits/blob/main/MarmeladeFinance%20Smart%20Contract%20Security%20Audit.pdf"
+  },
+  {
     label: 'More',
     icon: 'MoreIcon',
     items: [

@@ -113,8 +113,6 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, cakePrice, bnbPrice,
     return new BigNumber(farm.quoteTokenPrice).times(farm.lpTotalInQuoteToken)
   }, [bnbPrice, cakePrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol, farm.quoteTokenPrice])
 
-  console.log("bnb price ", bnbPrice?.toString())
-
   const totalValueFormated = totalValue
     ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
     : '-'

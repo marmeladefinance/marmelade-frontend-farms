@@ -55,8 +55,8 @@ const Liquidity: React.FunctionComponent<LiquidityProps> = ({ farm }) => {
       return cakePrice.times(farm.lpTotalInQuoteToken)
     }
 
-    return farm.lpTotalInQuoteToken
-  }, [bnbPrice, cakePrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol])
+    return new BigNumber(farm.quoteTokenPrice).times(new BigNumber(farm.lpTotalInQuoteToken))
+  }, [bnbPrice, cakePrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol, farm.quoteTokenPrice])
 
   const totalValueFormated = totalValue
     ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`

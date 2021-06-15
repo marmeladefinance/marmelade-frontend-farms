@@ -63,9 +63,9 @@ const Home: React.FC = () => {
           {TranslateString(576, 'Marmelade Swap')}
         </Heading>
         <Text>{TranslateString(999, 'New DeFi app on Binance Smart Chain.')}</Text>
-        <LinkExternal href="https://app.bounce.finance/fixed-swap/8854" style={{ marginTop: '10px' }} fontSize="25px" color="#d00026">
+        {/* <LinkExternal href="https://app.bounce.finance/fixed-swap/8854" style={{ marginTop: '10px' }} fontSize="25px" color="#d00026">
           {TranslateString(9999, 'Presale Link Here')}
-        </LinkExternal>
+        </LinkExternal> */}
         <LinkExternal href="https://bscscan.com/block/countdown/8300000" style={{ marginTop: '10px' }} fontSize="25px">
           {TranslateString(9999, 'Farming Starts on Block 8300000')}
         </LinkExternal>
